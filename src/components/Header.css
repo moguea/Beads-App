@@ -1,49 +1,96 @@
 header {
-  background-color: #86469C;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-  border-radius: 100px 100px 100px 100px; /* Agregar borde redondeado solo en la parte inferior */
-  margin-bottom: 50px;
-  padding-top: 10px; /* Ajusta el espacio superior según sea necesario */
-  padding-bottom: 10px; /* Ajusta el espacio inferior según sea necesario */
-  margin-top: 0; /* Elimina el margen superior */
-  margin-bottom: 0;
+  background-color: #6b1d9b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.cart {
+  float: right;
+  margin-right: 20px;
 }
 
-.menu-toggle {
-  float: left; /* Ajusta la posición a la derecha */
-  margin-top: 20px; /* Ajusta el espacio desde la parte superior si es necesario */
+.fa-shopping-cart {
+  font-size: 30px;
+  color: white;
 }
 
-.menu-toggle i {
-  font-size: 1.5rem; /* Tamaño del icono de la hamburguesa */
-  cursor: pointer;
+.cart-container {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
 }
 
 .menu {
-  list-style: none;
-  display: none;
-  position: absolute;
-  top: calc(10% + 10px);
-  left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.barry {
+  display: flex;
+  flex-direction: column;
+  margin-right: 1px;
+}
+
+.bar {
+  width: 30px;
+  height: 3px;
   background-color: #FB9AD1;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  opacity: 0; /* Opacidad inicial establecida en 0 */
-  transition: opacity 0.3s ease; 
+  margin: 3px 0;
 }
 
-.menu.show-menu {
-  display: block;
-  opacity: 1; 
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
 }
 
-.menu li {
-  margin-bottom: 10px; /* Espacio entre elementos del menú */
+.logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
 }
 
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  max-width: 80px; /* Agrega esta propiedad para limitar el ancho del contenedor del menú */
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out
+}
+
+li {
+  margin-right: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+select {
+  background-color: #333;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+option {
+  background-color: #333;
+  color: white;
+}
 /* Ajusta los estilos para tamaños de pantalla más pequeños */
 @media screen and (max-width: 768px) {
   .menu {
@@ -55,7 +102,4 @@ header {
   }
 }
 
-.logo {
-  border-radius: 300px; 
-  width: 150px;
-}
+
