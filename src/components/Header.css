@@ -1,0 +1,61 @@
+header {
+  background-color: #86469C;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 100px 100px 100px 100px; /* Agregar borde redondeado solo en la parte inferior */
+  margin-bottom: 50px;
+  padding-top: 10px; /* Ajusta el espacio superior según sea necesario */
+  padding-bottom: 10px; /* Ajusta el espacio inferior según sea necesario */
+  margin-top: 0; /* Elimina el margen superior */
+  margin-bottom: 0;
+}
+
+.menu-toggle {
+  float: left; /* Ajusta la posición a la derecha */
+  margin-top: 20px; /* Ajusta el espacio desde la parte superior si es necesario */
+}
+
+.menu-toggle i {
+  font-size: 1.5rem; /* Tamaño del icono de la hamburguesa */
+  cursor: pointer;
+}
+
+.menu {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: calc(10% + 10px);
+  left: 0;
+  background-color: #FB9AD1;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  opacity: 0; /* Opacidad inicial establecida en 0 */
+  transition: opacity 0.3s ease; 
+}
+
+.menu.show-menu {
+  display: block;
+  opacity: 1; 
+}
+
+.menu li {
+  margin-bottom: 10px; /* Espacio entre elementos del menú */
+}
+
+/* Ajusta los estilos para tamaños de pantalla más pequeños */
+@media screen and (max-width: 768px) {
+  .menu {
+      display: none; /* Oculta el menú por defecto en tamaños de pantalla más pequeños */
+  }
+
+  .menu-toggle {
+      display: block; /* Muestra el icono de hamburguesa en tamaños de pantalla más pequeños */
+  }
+}
+
+.logo {
+  border-radius: 300px; 
+  width: 150px;
+}
