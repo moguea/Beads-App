@@ -5,6 +5,7 @@ import Productos from './components/Productos';
 import Nosotros from './components/Nosotros';
 import Contacto from './components/Contacto';
 import Footer from './components/Footer';
+import Modal from './components/Modal';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <main>
         <Productos />
+        <Modal />
         <Nosotros />
         <Contacto />
       </main>
